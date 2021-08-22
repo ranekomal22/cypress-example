@@ -1,8 +1,11 @@
+import 'cypress-file-upload';
+import 'cypress-xpath';
+
 // Custom Cypress commands
 
 Cypress.Commands.add('login', () => {
     // Open StoryMap page and sign in
-    cy.visit('https://storymaps.arcgis.com/')
+    cy.visit('/')
     cy.get('.button').should('have.text', 'Sign in').click()
 
     // verify we are on sign in page
