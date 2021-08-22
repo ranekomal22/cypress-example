@@ -9,6 +9,8 @@
   "author": "Komal Rane",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^8.3.0"
+    "cypress": "^8.3.0",
+    "cypress-file-upload": "^5.0.8",
+    "cypress-xpath": "^1.6.2"
   }
 }
