@@ -8,7 +8,7 @@ describe('Validate StoryMaps Landing Page', () => {
         cy.visit('/')
     })
 
-    it.only('should load static components', () => {
+    it('should load static components', () => {
         // validate page title and logo
         cy.get('img.jsx-2772286003.logo').should('be.visible')
 

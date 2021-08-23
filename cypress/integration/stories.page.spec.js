@@ -75,17 +75,17 @@ describe('Validate Stories Page', () => {
 
     it('should create a new story', () => {
         
-        // Delete the first story (just for cleanup)
-        cy.get('[data-testid=context-menu-button]').first().should('be.visible').click()
-        cy.get('button.jsx-2684419046.dropdown-menu-item').should('be.visible').click()
-        cy.contains('Yes, delete').should('be.visible').click()
+        // // Delete the first story (just for cleanup)
+        // cy.get('[data-testid=context-menu-button]').first().should('be.visible').click()
+        // cy.get('button.jsx-2684419046.dropdown-menu-item').should('be.visible').click()
+        // cy.contains('Yes, delete').should('be.visible').click()
         
-        // Wait until Story deleted message goes away
-        // Until this element goes away we cannot interact with new stories button
-        cy.get('div.toast').should("not.be.visible")
-        cy.get('div.toast', {timeout: 10000}).should("not.exist")
+        // // Wait until Story deleted message goes away
+        // // Until this element goes away we cannot interact with new stories button
+        // cy.get('div.toast').should("not.be.visible")
+        // cy.get('div.toast', {timeout: 10000}).should("not.exist")
 
-        // click on new story button
+        // // click on new story button
         cy.get('button.jsx-4157471165').contains('New story').should('be.visible').click()
         cy.get('span.jsx-841270279.button-text').contains('Start from scratch').click()
         
@@ -119,7 +119,7 @@ describe('Validate Stories Page', () => {
         cy.get('div.ql-editor').should('have.attr', 'contenteditable', 'true')
             .first()
             .should('be.visible')
-            .type('California Trip{enter}', {delay: 20})
+            .type('California Trip{enter}', {delay: 50})
 
         // Click on + icon again to add another field 
         cy.get('div.jsx-4218683185.is-awake')
