@@ -76,14 +76,14 @@ describe('Validate Stories Page', () => {
     it('should create a new story', () => {
         
         // Delete the first story (just for cleanup)
-        // cy.get('[data-testid=context-menu-button]').first().should('be.visible').click()
-        // cy.get('button.jsx-2684419046.dropdown-menu-item').should('be.visible').click()
-        // cy.contains('Yes, delete').should('be.visible').click()
+        cy.get('[data-testid=context-menu-button]').first().should('be.visible').click()
+        cy.get('button.jsx-2684419046.dropdown-menu-item').should('be.visible').click()
+        cy.contains('Yes, delete').should('be.visible').click()
         
         // Wait until Story deleted message goes away
         // Until this element goes away we cannot interact with new stories button
-        // cy.get('div.toast').should("not.be.visible")
-        // cy.get('div.toast', {timeout: 10000}).should("not.exist")
+        cy.get('div.toast').should("not.be.visible")
+        cy.get('div.toast', {timeout: 10000}).should("not.exist")
 
         // click on new story button
         cy.get('button.jsx-4157471165').contains('New story').should('be.visible').click()
@@ -92,7 +92,7 @@ describe('Validate Stories Page', () => {
         const storyTitle = `automation-${Date.now()}`;
 
         // Enter Story title with current epoch to make story name unique
-        cy.get('textarea.sc-title', {timeout: 10000})
+        cy.get('textarea.sc-title', {timeout: 20000})
             .should('have.attr', 'placeholder', 'Title your story')
             .should('be.visible')
             .type(`${storyTitle}{enter}`)
@@ -119,7 +119,7 @@ describe('Validate Stories Page', () => {
         cy.get('div.ql-editor').should('have.attr', 'contenteditable', 'true')
             .first()
             .should('be.visible')
-            .type(` California Trip{enter}`)
+            .type('California Trip{enter}', {delay: 20})
 
         // Click on + icon again to add another field 
         cy.get('div.jsx-4218683185.is-awake')
@@ -146,7 +146,7 @@ describe('Validate Stories Page', () => {
         cy.contains('Publish story').should('be.visible').click()
 
         // Varify that story was published
-        cy.get('h1.sc-title', {timeout: 20000})
+        cy.get('h1.sc-title', {timeout: 30000})
             .should('be.visible')
             .should('have.text', storyTitle)
     })
