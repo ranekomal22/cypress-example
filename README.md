@@ -1,5 +1,4 @@
-# cypress-example       
-=================     
+# cypress-example            
 Example to demonstrate Cypress Test Automation framework       
 
 System Requirements
