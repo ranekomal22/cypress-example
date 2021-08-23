@@ -1,6 +1,6 @@
-# cypress-example     
-=================
-Example to demonstrate Cypress Test Automation framework  
+# cypress-example       
+=================     
+Example to demonstrate Cypress Test Automation framework       
 
 System Requirements
 ---------------
