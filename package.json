@@ -1,7 +1,7 @@
 {
   "name": "cypress-example",
   "version": "1.0.0",
-  "description": "Exmaple of cypress project",
+  "description": "Example to demonstrate Cypress Test Automation framework",
   "main": "index.js",
   "scripts": {
     "cypress:open": "cypress open"
