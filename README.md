@@ -55,5 +55,7 @@ TC3: It should create a new story
       - Publish the story privately
       - Verify that story was published  
  ```
-
+Tests Execution Demo
+---------------
+https://www.youtube.com/watch?v=ZVvw6IHwKoY
 
